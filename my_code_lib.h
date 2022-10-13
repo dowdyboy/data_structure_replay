@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include <functional>
+#include <algorithm>
 using namespace std;
 
-#include "my_entity.h"
-#include "linear_search.h"
+#include "entity.h"
+#include "assist.h"
+#include "search.h"
 
 
 #endif

@@ -139,11 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="linear_search.h" />
+    <ClInclude Include="assist.h" />
+    <ClInclude Include="search.h" />
     <ClInclude Include="my_code_lib.h" />
-    <ClInclude Include="my_entity.h" />
+    <ClInclude Include="entity.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="assist.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="search.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
