@@ -9,3 +9,13 @@ int* ArrayGenerator::generateOrderedIntArray(int size, int start, int step) {
 	}
 	return ret;
 }
+
+int* ArrayGenerator::generateRandomIntArray(int size, int start, int end) {
+	srand(time(NULL));
+	int* ret = new int[size];
+	for (int i=0; i<size; i++){
+		int rnd = RANDOM(start, end);
+		ret[i] = rnd;
+	}
+	return ret;
+}

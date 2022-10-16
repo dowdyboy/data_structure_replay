@@ -5,11 +5,13 @@
 #include <string>
 #include <functional>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 
 #include "entity.h"
 #include "assist.h"
 #include "search.h"
+#include "sort.h"
 
 
 #endif

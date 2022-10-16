@@ -3,11 +3,14 @@
 
 #include "my_code_lib.h"
 
+#define RANDOM(a, b) (rand() % (b - a + 1) + a)
+
 class ArrayGenerator {
 private:
 	ArrayGenerator() { ; }
 public:
 	static int* generateOrderedIntArray(int size, int start=0, int step=1);
+	static int* generateRandomIntArray(int size, int start=0, int end=10000);
 };
 
 class SpeedTester {
@@ -30,6 +33,33 @@ double SpeedTester::test(int count, Fn func, Args... args) {
 	time_used = (double)(end_t - start_t);
 	time_used /= CLOCKS_PER_SEC;
 	return time_used;
+}
+
+
+class Util {
+private:
+	Util() { ; }
+public:
+	template<typename T>
+	static void swap(T& a, T& b);
+
+	template<typename T>
+	static void print_array(T data[], int size);
+};
+
+template<typename T>
+void Util::swap(T& a, T& b) {
+	T tmp = a;
+	a = b;
+	b = tmp;
+}
+
+template<typename T>
+void Util::print_array(T data[], int size) {
+	for (int i = 0; i < size; i++) {
+		cout << data[i] << " ";
+	}
+	cout << endl;
 }
 
 

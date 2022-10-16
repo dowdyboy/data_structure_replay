@@ -21,8 +21,25 @@ void test_linear_search(int size) {
 	delete[] arr;
 }
 
-int main() {
+void test_time_calc() {
 	double t = SpeedTester::test(10, test_linear_search, 10000);
 	cout << "time used : " << t << endl;
+}
+
+void test_select_sort(int size) {
+	int* arr = ArrayGenerator::generateRandomIntArray(size);
+	// Util::print_array(arr, size);
+	SelectSort::sort(arr, 0, size);
+	// Util::print_array(arr, size);
+	delete[] arr;
+}
+
+void test_select_sort_time() {
+	double t = SpeedTester::test(1, test_select_sort, 10000);
+	cout << "time used : " << t << endl;
+}
+
+int main() {
+	test_select_sort_time();
 	return 0;
 }
