@@ -45,6 +45,9 @@ public:
 
 	template<typename T>
 	static void print_array(T data[], int size);
+
+	template<typename T>
+	static bool is_sorted_array(T data[], int size, bool reverse = false);
 };
 
 template<typename T>
@@ -60,6 +63,16 @@ void Util::print_array(T data[], int size) {
 		cout << data[i] << " ";
 	}
 	cout << endl;
+}
+
+template<typename T>
+bool Util::is_sorted_array(T data[], int size, bool reverse) {
+	for (int i = 0; i < size - 1; i++) {
+		if (reverse ? data[i] < data[i + 1] : data[i] > data[i + 1]) {
+			return false;
+		}
+	}
+	return true;
 }
 
 

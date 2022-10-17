@@ -31,6 +31,9 @@ void test_select_sort(int size) {
 	// Util::print_array(arr, size);
 	SelectSort::sort(arr, 0, size);
 	// Util::print_array(arr, size);
+	if (!Util::is_sorted_array(arr, size)) {
+		cout << "sort fail" << endl;
+	}
 	delete[] arr;
 }
 
@@ -50,7 +53,50 @@ void test_select_sort_custom() {
 	Util::print_array(data, 3);
 }
 
-int main() {
+void test_insert_sort(int size) {
+	int* arr = ArrayGenerator::generateRandomIntArray(size);
+	// Util::print_array(arr, size);
+	InsertSort::sort(arr, 0, size);
+	// Util::print_array(arr, size);
+	if (!Util::is_sorted_array(arr, size)) {
+		cout << "sort fail" << endl;
+	}
+	delete[] arr;
+}
 
+void test_insert_sort_ordered(int size) {
+	int* arr2 = ArrayGenerator::generateOrderedIntArray(size);
+	InsertSort::sort(arr2, 0, size);
+	if (!Util::is_sorted_array(arr2, size)) {
+		cout << "sort fail" << endl;
+	}
+	delete[] arr2;
+}
+
+void test_insert_sort_time() {
+	double t = SpeedTester::test(1, test_insert_sort, 10000);
+	cout << "time used : " << t << endl;
+	t = SpeedTester::test(1, test_insert_sort_ordered, 10000);
+	cout << "time used : " << t << endl;
+}
+
+
+void test_insert_sort_custom() {
+	Student data[3] = {
+		Student("zhang san", 20),
+		Student("li si", 19),
+		Student("wang wu", 18)
+	};
+	Util::print_array(data, 3);
+	InsertSort::sort(data, 0, 3);
+	Util::print_array(data, 3);
+	if (!Util::is_sorted_array(data, 3)) {
+		cout << "sort fail" << endl;
+	}
+}
+
+
+int main() {
+	test_insert_sort_custom();
 	return 0;
 }

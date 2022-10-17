@@ -15,6 +15,7 @@ public:
 	}
 	bool operator==(const Student& s) const;
 	bool operator<(const Student& s) const;
+	bool operator>(const Student& s) const;
 
 	friend ostream& operator<<(ostream& os, const Student& s);
 };
