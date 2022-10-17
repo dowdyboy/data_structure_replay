@@ -39,7 +39,18 @@ void test_select_sort_time() {
 	cout << "time used : " << t << endl;
 }
 
+void test_select_sort_custom() {
+	Student data[3] = {
+		Student("zhang san", 20),
+		Student("li si", 19),
+		Student("wang wu", 18)
+	};
+	Util::print_array(data, 3);
+	SelectSort::sort(data, 0, 3);
+	Util::print_array(data, 3);
+}
+
 int main() {
-	test_select_sort_time();
+
 	return 0;
 }
