@@ -9,6 +9,7 @@ private:
 	int age;
 
 public:
+	Student() { ; }
 	Student(string name, int age) {
 		this->name = name;
 		this->age = age;

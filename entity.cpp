@@ -28,6 +28,6 @@ bool Student::operator>(const Student& s) const {
 }
 
 ostream& operator<<(ostream& os, const Student& s) {
-	os << "Student (" << s.name << " , " << s.age << ")" << endl;
+	os << "Student (" << s.name << " , " << s.age << ")";
 	return os;
 }

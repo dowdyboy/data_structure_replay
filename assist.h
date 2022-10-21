@@ -41,7 +41,7 @@ private:
 	Util() { ; }
 public:
 	template<typename T>
-	static void swap(T& a, T& b);
+	inline static void swap(T& a, T& b);
 
 	template<typename T>
 	static void print_array(T data[], int size);
@@ -51,7 +51,7 @@ public:
 };
 
 template<typename T>
-void Util::swap(T& a, T& b) {
+inline void Util::swap(T& a, T& b) {
 	T tmp = a;
 	a = b;
 	b = tmp;

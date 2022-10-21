@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="assist.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="search.h" />
     <ClInclude Include="my_code_lib.h" />
     <ClInclude Include="entity.h" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="assist.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="list.cpp" />
     <ClCompile Include="search.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sort.cpp" />

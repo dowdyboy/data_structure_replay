@@ -95,8 +95,44 @@ void test_insert_sort_custom() {
 	}
 }
 
+void test_array_list() {
+	ArrayList<int> a;
+	for (int i = 0; i < 10; i++) {
+		a.add(i * 10);
+	}
+	cout << a << endl;
+	a.add(10);
+	cout << a << endl;
+	a[0] = 99;
+	cout << a << endl;
+	a.update(0, 111);
+	cout << a << endl;
+	// int x[10] = { 0 };
+	// cout << x[1111] << endl;
+	a.removeFirst();
+	cout << a << endl;
+	a.removeFirst();
+	cout << a << endl;
+}
+
+void test_array_list_custom() {
+	Student data[3] = {
+		Student("zhang san", 18),
+		Student("li si", 19),
+		Student("wang wu", 20)
+	};
+	ArrayList<Student> a;
+	a.add(data[0]);
+	a.add(data[1]);
+	a.add(data[2]);
+	cout << a << endl;
+	a.removeFirst();
+	cout << a << endl;
+}
+
 
 int main() {
-	test_insert_sort_custom();
+
+
 	return 0;
 }
