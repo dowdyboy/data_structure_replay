@@ -40,10 +40,13 @@ public:
 	}
 	virtual T& operator[](const int index) const = 0;
 	virtual T& get(const int index) = 0;
+	virtual T& getFirst() = 0;
+	virtual T& getLast() = 0;
 	virtual int indexOf(const T& e) = 0;
 	virtual int indexOf(const T&& e) {
 		return this->indexOf(e);
 	}
+	virtual int getSize() const = 0;
 };
 
 template <typename T>
@@ -160,6 +163,12 @@ public:
 		}
 		return this->data[index];
 	}
+	T& getFirst() {
+		return this->get(0);
+	}
+	T& getLast() {
+		return this->get(this->size - 1);
+	}
 	T& operator[](int index) const {
 		/*if (index < 0 || index > this->size - 1) {
 			throw exception("index out of range");
@@ -173,6 +182,12 @@ public:
 			}
 		}
 		return -1;
+	}
+	int getSize() const {
+		return this->size;
+	}
+	int getCapacity() {
+		return this->capacity;
 	}
 	
 

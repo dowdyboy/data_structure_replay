@@ -18,6 +18,8 @@ using namespace std;
 #include "entity.h"
 #include "assist.h"
 #include "list.h"
+#include "stack.h"
+#include "queue.h"
 #include "search.h"
 #include "sort.h"
 

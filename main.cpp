@@ -130,9 +130,32 @@ void test_array_list_custom() {
 	cout << a << endl;
 }
 
+void test_stack() {
+	ArrayStack<int> s;
+	s.push(1);
+	s.push(2);
+	s.push(3);
+	cout << s << endl;
+	int e = s.pop();
+	cout << "pop data: " << e << endl;
+	cout << s << endl;
+	cout << "top data: " << s.peek() << endl;
+}
+
+void test_queue() {
+	ArrayQueue<int> q;
+	q.enqueue(1);
+	q.enqueue(2);
+	q.enqueue(3);
+	cout << q << endl;
+	int e = q.dequeue();
+	cout << "dequeue data: " << e << endl;
+	cout << q << endl;
+	cout << "front data: " << q.getFront() << endl;
+}
+
 
 int main() {
-
-
+	test_queue();
 	return 0;
 }
