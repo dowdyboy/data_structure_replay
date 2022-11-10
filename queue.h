@@ -61,4 +61,21 @@ public:
 };
 
 
+template<typename T>
+class LoopQueue : public Queue {
+private:
+	T* data;
+	int head;
+	int tail;
+public:
+	LoopQueue() {
+
+	}
+	LoopQueue(int capacity) {
+
+	}
+};
+
+
+
 #endif
